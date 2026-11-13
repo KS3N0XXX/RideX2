@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>О нас · RideX</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/products.js"></script>
+        <script defer src="../js/app.js"></script>
+        <link rel="icon" href="../images/bike.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+            rel="stylesheet"
+        >
+    </head>
+    <body data-page="about" data-base="../" data-catalog="../html/catalog.html">
+        <header class="top">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/Group%201.svg" alt="RideX, главная">
+                    </a>
+                </div>
+                <nav class="main-navigation" aria-label="Главное меню">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="../html/catalog.html">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="../html/about.html" aria-current="page">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="search-bar" action="../html/catalog.html" role="search">
+                    <button type="submit" aria-label="Найти">
+                        <img src="../images/search.svg" alt="">
+                    </button>
+                    <input
+                        type="search"
+                        name="q"
+                        placeholder="Найти велосипед"
+                        aria-label="Поиск велосипеда"
+                    >
+                </form>
+                <div class="user-icons">
+                    <a href="../html/favorites.html" class="icon-link">
+                        <img src="../images/heart.svg" alt="Избранное" class="user-icon">
+                    </a>
+                    <a href="../html/cart.html" class="icon-link cart-icon" aria-label="Корзина">
+                        <img src="../images/cart.svg" alt="" class="user-icon">
+                        <b id="count" hidden></b>
+                    </a>
+                </div>
+                <div class="auth-buttons">
+                    <a href="../html/login.html" class="btn btn-login" id="login-link">Войти</a>
+                    <a href="../html/register.html" class="btn btn-register">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrap page about">
+                <p class="bread"><a href="../index.html">Главная</a> / О нас</p>
+                <section class="split">
+                    <div>
+                        <span class="pill">ЭТО RIDEX</span>
+                        <h1>Больше, чем<br>просто велосипед.</h1>
+                        <p>
+                            Мы помогаем находить свой ритм, открывать новые места и чувствовать свободу движения.
+                        </p>
+                        <a class="accent" href="../html/catalog.html">
+                            Для города. Для гор. Для тебя.
+                        </a>
+                    </div>
+                    <img src="../images/about.webp" alt="Велосипедист в горах">
+                </section>
+                <div class="stats">
+                    <div>
+                        <strong>5+ лет</strong>
+                        <small>на рынке</small>
+                    </div>
+                    <div>
+                        <strong>100 000+</strong>
+                        <small>довольных клиентов</small>
+                    </div>
+                    <div>
+                        <strong>4.9 / 5</strong>
+                        <small>рейтинг магазина</small>
+                    </div>
+                </div>
+                <section class="split">
+                    <div>
+                        <img src="../images/ride.webp" alt="Поездка на велосипеде по тропе">
+                    </div>
+                    <div>
+                        <span class="pill">НАШ ПОДХОД</span>
+                        <h2>Правильный велосипед — тот, на котором хочется ехать.</h2>
+                        <p>
+                            У каждого свой маршрут. Мы собрали велосипеды для разных целей и уровней подготовки.
+                        </p>
+                        <p>
+                            Поможем разобраться в размерах рамы и комплектации, объясним разницу между моделями и подберём подходящий вариант.
+                        </p>
+                    </div>
+                </section>
+                <section class="block" id="contacts">
+                    <h2>С тобой на каждом километре</h2>
+                    <div class="three grid">
+                        <article class="panel" id="guarantee">
+                            <i data-icon="shield"></i>
+                            <h3>Уверенность в выборе</h3>
+                            <p>
+                                Проверенные бренды, понятные характеристики и гарантия на велосипеды.
+                            </p>
+                        </article>
+                        <article class="panel" id="delivery">
+                            <i data-icon="truck"></i>
+                            <h3>Без лишнего ожидания</h3>
+                            <p>Быстрая доставка от 1 дня и помощь с оформлением.</p>
+                        </article>
+                        <article class="panel">
+                            <i data-icon="return"></i>
+                            <h3>Поддержка после покупки</h3>
+                            <p>Подскажем по уходу, настройке и возврату.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="block">
+                    <h2>От выбора до первой поездки</h2>
+                    <ol class="grid three steps">
+                        <li>
+                            <b>01</b>
+                            <h3>Расскажи о маршруте</h3>
+                            <p>Город, бездорожье или всё сразу?</p>
+                        </li>
+                        <li>
+                            <b>02</b>
+                            <h3>Найди свою модель</h3>
+                            <p>Сравни характеристики и размер рамы.</p>
+                        </li>
+                        <li>
+                            <b>03</b>
+                            <h3>Отправляйся в путь</h3>
+                            <p>Добавь велосипед в корзину и оформи заказ.</p>
+                        </li>
+                    </ol>
+                </section>
+                <aside class="callout">
+                    <div>
+                        <h2>Твой новый маршрут начинается здесь</h2>
+                        <p>Выбирай велосипед, который подходит именно тебе.</p>
+                    </div>
+                    <a class="button " href="../html/catalog.html">Перейти в каталог →</a>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <a class="logo" href="../index.html"><i data-icon="bike"></i>RideX</a>
+                <span>Выбирай. Покупай. Катайся.</span>
+                <div>
+                    <a href="../html/about.html#delivery">Доставка и оплата</a>
+                    <a href="../html/about.html#guarantee">Гарантия</a>
+                    <a href="../html/about.html#contacts">Контакты</a>
+                </div>
+                <span>© 2026 RideX</span>
+            </div>
+        </footer>
+        <div id="toast" role="status"></div>
+    </body>
+</html>

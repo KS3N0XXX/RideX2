@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Каталог · RideX</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/products.js"></script>
+        <script defer src="../js/app.js"></script>
+        <link rel="icon" href="../images/bike.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+            rel="stylesheet"
+        >
+    </head>
+    <body data-page="catalog" data-base="../" data-catalog="../html/catalog.html">
+        <header class="top">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/Group%201.svg" alt="RideX, главная">
+                    </a>
+                </div>
+                <nav class="main-navigation" aria-label="Главное меню">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="../html/catalog.html" aria-current="page">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="../html/about.html">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="search-bar" action="../html/catalog.html" role="search">
+                    <button type="submit" aria-label="Найти">
+                        <img src="../images/search.svg" alt="">
+                    </button>
+                    <input
+                        type="search"
+                        name="q"
+                        placeholder="Найти велосипед"
+                        aria-label="Поиск велосипеда"
+                    >
+                </form>
+                <div class="user-icons">
+                    <a href="../html/favorites.html" class="icon-link">
+                        <img src="../images/heart.svg" alt="Избранное" class="user-icon">
+                    </a>
+                    <a href="../html/cart.html" class="icon-link cart-icon" aria-label="Корзина">
+                        <img src="../images/cart.svg" alt="" class="user-icon">
+                        <b id="count" hidden></b>
+                    </a>
+                </div>
+                <div class="auth-buttons">
+                    <a href="../html/login.html" class="btn btn-login" id="login-link">Войти</a>
+                    <a href="../html/register.html" class="btn btn-register">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrap page">
+                <p class="bread"><a href="../index.html">Главная</a> / Каталог</p>
+                <h1>Каталог велосипедов</h1>
+                <p class="intro">От городских улиц до горных троп — выбирай свой ритм.</p>
+                <div class="catalog">
+                    <form id="filters" class="panel filters">
+                        <div class="section-head">
+                            <h2>Фильтры</h2>
+                            <button class="text" type="reset">Сбросить</button>
+                        </div>
+                        <fieldset>
+                            <legend>Категория</legend>
+                            <label>
+                                <input type="radio" name="category" value="" checked>
+                                Все велосипеды
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="mountain">
+                                Горные
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="road">
+                                Шоссейные
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="electric">
+                                Электровелосипеды
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="kids">
+                                Детские
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Цена, ₽</legend>
+                            <div class="prices">
+                                <label>
+                                    От
+                                    <input type="number" name="min" min="0" placeholder="15 000">
+                                </label>
+                                <label>
+                                    До
+                                    <input type="number" name="max" min="0" placeholder="120 000">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Бренд</legend>
+                            <label>
+                                <input type="checkbox" name="brand" value="Trek">
+                                Trek
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="Specialized">
+                                Specialized
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="Kugoo">
+                                Kugoo
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="STELS">
+                                STELS
+                            </label>
+                        </fieldset>
+                        <label>
+                            <input type="checkbox" name="sale">
+                            Со скидкой
+                        </label>
+                        <button class="button">Показать велосипеды</button>
+                    </form>
+                    <div>
+                        <div class="section-head catalog-top">
+                            <p id="results" aria-live="polite"></p>
+                            <select id="sort" aria-label="Сортировка">
+                                <option value="">Сначала популярные</option>
+                                <option value="low">Сначала дешевле</option>
+                                <option value="high">Сначала дороже</option>
+                            </select>
+                        </div>
+                        <div id="products" class="grid three"></div>
+                        <aside class="callout">
+                            <div>
+                                <h3>Подберём велосипед под твой маршрут</h3>
+                                <p>Поможем с размером рамы, комплектацией и доставкой.</p>
+                            </div>
+                            <a class="button outline" href="../html/about.html#contacts">
+                                Получить консультацию
+                            </a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <a class="logo" href="../index.html"><i data-icon="bike"></i>RideX</a>
+                <span>Выбирай. Покупай. Катайся.</span>
+                <div>
+                    <a href="../html/about.html#delivery">Доставка и оплата</a>
+                    <a href="../html/about.html#guarantee">Гарантия</a>
+                    <a href="../html/about.html#contacts">Контакты</a>
+                </div>
+                <span>© 2026 RideX</span>
+            </div>
+        </footer>
+        <div id="toast" role="status"></div>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Профиль · RideX</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/products.js"></script>
+        <script defer src="../js/app.js"></script>
+        <link rel="icon" href="../images/bike.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+            rel="stylesheet"
+        >
+    </head>
+    <body data-page="account" data-base="../" data-catalog="../html/catalog.html">
+        <header class="top">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/Group%201.svg" alt="RideX, главная">
+                    </a>
+                </div>
+                <nav class="main-navigation" aria-label="Главное меню">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="../html/catalog.html">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="../html/about.html">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="search-bar" action="../html/catalog.html" role="search">
+                    <button type="submit" aria-label="Найти">
+                        <img src="../images/search.svg" alt="">
+                    </button>
+                    <input
+                        type="search"
+                        name="q"
+                        placeholder="Найти велосипед"
+                        aria-label="Поиск велосипеда"
+                    >
+                </form>
+                <div class="user-icons">
+                    <a href="../html/favorites.html" class="icon-link">
+                        <img src="../images/heart.svg" alt="Избранное" class="user-icon">
+                    </a>
+                    <a href="../html/cart.html" class="icon-link cart-icon" aria-label="Корзина">
+                        <img src="../images/cart.svg" alt="" class="user-icon">
+                        <b id="count" hidden></b>
+                    </a>
+                </div>
+                <div class="auth-buttons">
+                    <a
+                        href="../html/login.html"
+                        class="btn btn-login"
+                        id="login-link"
+                        aria-current="page"
+                    >
+                        Войти
+                    </a>
+                    <a href="../html/register.html" class="btn btn-register">Регистрация</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrap page auth">
+                <aside class="auth-cover">
+                    <img src="../images/auth.webp" alt="Велосипед на фоне гор">
+                    <div>
+                        <h2>Твой следующий<br>маршрут — здесь.</h2>
+                        <p>Сохраняй любимые велосипеды и открывай новые дороги вместе с RideX.</p>
+                        <small>5+ лет с вами · 100 000+ велосипедистов</small>
+                    </div>
+                </aside>
+                <section class="auth-form">
+                    <div id="profile">
+                        <h1>Личный кабинет</h1>
+                        <p class="intro">Привет, <span id="profile-name">…</span>!</p>
+                        <p>Почта: <span id="profile-email"></span></p>
+                        <p><a class="button" href="catalog.html">Перейти в каталог</a></p>
+                        <button class="button outline" id="logout" type="button" disabled>Выйти</button>
+                        <p id="account-error" role="alert"></p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <a class="logo" href="../index.html"><i data-icon="bike"></i>RideX</a>
+                <span>Выбирай. Покупай. Катайся.</span>
+                <div>
+                    <a href="../html/about.html#delivery">Доставка и оплата</a>
+                    <a href="../html/about.html#guarantee">Гарантия</a>
+                    <a href="../html/about.html#contacts">Контакты</a>
+                </div>
+                <span>© 2026 RideX</span>
+            </div>
+        </footer>
+        <div id="toast" role="status"></div>
+    </body>
+</html>
